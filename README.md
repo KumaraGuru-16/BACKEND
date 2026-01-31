@@ -101,7 +101,7 @@ The system enforces Role-Based Access Control (RBAC).
         ```
 
 ## 7. Live Deployment
-* **Backend URL:** 
+* **Backend URL: https://fsd-43-backend.onrender.com** 
 * **Frontend URL:** 
 
 ## 8. Business Rules Implementation (Critical)
