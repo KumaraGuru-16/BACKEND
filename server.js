@@ -6,16 +6,24 @@ import authRoutes from './routes/authRoutes.js';
 import recordRoutes from './routes/recordRoutes.js';
 
 dotenv.config();
-connectDB();     
+
+// Connect to Database
+connectDB();
 
 const app = express();
 
+// Middleware
 app.use(cors());
 app.use(express.json());
 
 // Routes
 app.use('/api/auth', authRoutes);
 app.use('/api/records', recordRoutes);
+
+// Root Endpoint (Optional, fixes "Cannot GET /" error)
+app.get('/', (req, res) => {
+  res.send('API is running successfully');
+});
 
 const PORT = process.env.PORT || 5000;
 
